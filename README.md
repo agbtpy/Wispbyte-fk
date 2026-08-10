@@ -2,23 +2,6 @@
 
 > 基于 **GitHub Actions + SeleniumBase** 的全自动服务器重启方案，支持自动登录、广告观看、Cloudflare Turnstile 验证，通过 **Telegram** 发送实时截图通知。
 
-⚠️ **旧版 Cloudflare Workers 方案已失效**（Workers 平台无法处理 Turnstile 验证与浏览器指纹检测），本文档合并保留其 API 调用说明，**主体内容为 GitHub Actions 新方案**。  
-已部署 Workers 的用户请迁移至 Actions 版本。
-
----
-
-## 📌 方案对比
-
-| 特性 | GitHub Actions（推荐） | Cloudflare Workers（已失效） |
-|------|------------------------|----------------------------|
-| 自动登录 | ✅ 完整模拟浏览器 | ❌ 需手动维护 Cookie |
-| Turnstile 验证 | ✅ 自动识别点击 | ❌ 不支持 |
-| 广告观看 | ✅ 自动处理 | ❌ 不支持 |
-| 每日自动执行 | ✅ Cron 定时 / API / 手动 | ✅ Cron 触发 |
-| Telegram 通知 | ✅ 每次重启截图通知 | ✅ 汇总报告 |
-| 部署难度 | 低（Fork + Secrets） | 中（Worker + KV） |
-| 当前状态 | ✅ 有效 | ❌ 已失效 |
-
 ---
 
 ## 🚀 快速开始
